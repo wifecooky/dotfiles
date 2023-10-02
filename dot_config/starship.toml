@@ -1,0 +1,54 @@
+# ~/.config/starship.toml
+format = """
+$os\
+$username\
+$hostname\
+$kubernetes\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$golang\
+$line_break\
+$time\
+$directory\
+$status
+"""
+[os]
+format = "[$symbol]($style)"
+style = "bold blue"
+disabled = false
+
+[status]
+style = 'bg:blue'
+symbol = '❌'
+success_symbol = '✓'
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
+
+[time]
+style='gray'
+disabled = false
+format = '[\[$time\]]($style) '
+time_format = '%T'
+
+[kubernetes]
+symbol = '☸ '
+format = '[$symbol$context( \($namespace\))]($style) '
+disabled = false
+
+[git_branch]
+truncation_symbol = ''
+#ignore_branches = ['master', 'main']
+format = 'on [$symbol$branch(:$remote_branch)]($style) '
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+tag_disabled = false
+
+
+[golang]
+format = 'via [Go $version](bold cyan) '
