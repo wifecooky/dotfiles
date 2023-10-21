@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/bash -e
 
 echo "Setting up your Mac..."
-echo "Installing Xcode Command Line Tools..."
-xcode-select --install
+
+# Install Xcode command line tools if not already installed.
+xcode-select --install 2>/dev/null || true
 
 ###################################################
 # Install rosetta
@@ -18,17 +19,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Save Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
-
-###################################################
-# Install GNU core utilities (those that come with macOS are outdated).
-###################################################
-brew install coreutils
-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-
-# Install some other useful utilities like `sponge`.
-brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
@@ -67,11 +57,12 @@ brew install jq
 brew install git
 brew install git-lfs
 # brew install imagemagick --with-webp
-brew install pnpm
-brew install asdf
-brew install tree
-brew install bat
+brew install pnpm # package manager
+brew install asdf # version manager
+brew install tree # display directory tree
+brew install bat # cat with wings
 brew install starship # cross-shell prompt
+brew install chezmoi # dotfiles manager
 
 
 ###################################################
