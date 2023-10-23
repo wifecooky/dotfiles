@@ -51,7 +51,9 @@ brew install zsh-completions
 brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 
+###################################################
 ## Install other useful binaries.
+###################################################
 brew install peco # interactive filtering tool
 brew install jq
 brew install git
@@ -72,9 +74,10 @@ brew tap homebrew/core
 brew tap homebrew/cask
 brew cask install visual-studio-code
 brew cask install google-chrome
-brew cask install iterm2
-brew cask install warp
-brew cask install raycast
+brew cask install iterm2 # terminal
+brew cask install warp # another terminal
+# brew cask install alfred # launcher
+brew cask install raycast # launcher
 brew cask install slack
 # brew cask install zoom
 brew cask install xmind # mind map
@@ -82,6 +85,7 @@ brew cask install authy
 # brew cask install diffmerge # diff tool
 # brew cask install docker
 
-
+###################################################
 # Remove outdated versions from the cellar.
+###################################################
 brew cleanup
