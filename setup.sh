@@ -79,7 +79,7 @@ brew cask install warp # another terminal
 # brew cask install alfred # launcher
 brew cask install raycast # launcher
 brew cask install slack
-# brew cask install zoom
+brew cask install zoom
 brew cask install xmind # mind map
 brew cask install authy
 # brew cask install diffmerge # diff tool
