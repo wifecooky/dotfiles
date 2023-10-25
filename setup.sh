@@ -89,3 +89,8 @@ brew cask install authy
 # Remove outdated versions from the cellar.
 ###################################################
 brew cleanup
+
+###################################################
+# Install some tools can't be installed by brew
+###################################################
+curl -fsSL https://d2lang.com/install.sh | sh -s -- # d2lang
