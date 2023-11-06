@@ -37,6 +37,7 @@ brew "zsh-syntax-highlighting"
 cask "font-hack-nerd-font"
 cask "iterm2"
 cask "raycast"
+cask "fig" # terminal auto completion (https://fig.io/)
 cask "tomatobar"
 cask "visual-studio-code"
 cask "slack"
@@ -45,3 +46,6 @@ cask "zoom"
 cask "docker"
 cask "google-chrome"
 cask "google-drive"
+
+# aws related
+brew "awscli"
