@@ -27,6 +27,7 @@ brew "git-lfs"
 brew "jq"
 brew "openssh"
 brew "peco"
+brew "meetingbar" # https://meetingbar.app/
 brew "starship"
 brew "tree"
 brew "zlib"
