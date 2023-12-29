@@ -28,10 +28,15 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 
 
-# 以下はただのエイリアス設定
+# エイリアス設定
 if builtin command -v bat > /dev/null; then
   alias cat="bat"
 fi
+
+if builtin command -v thefuck > /dev/null; then
+  alias fuck="thefuck"
+fi
+
 
 # pecoの活用1
 ## ctrl + r で過去に実行したコマンドを選択できるようにする。

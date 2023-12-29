@@ -31,6 +31,7 @@ brew "meetingbar" # https://meetingbar.app/
 brew "starship"
 brew "tree"
 brew "zlib"
+brew "thefuck" # https://github.com/nvbn/thefuck
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
