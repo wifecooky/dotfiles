@@ -81,7 +81,7 @@ alias gitco='git checkout $(git branch | sed -r "s/^[ \*]+//" | peco)'
 # -------------------------------------------------
 # Alias設定
 alias v='vim'
-alias fuck='thefuck'
+#alias fuck='thefuck'
 # -------------------------------------------------
 
 eval "$(starship init zsh)"
@@ -94,3 +94,4 @@ eval "$(starship init zsh)"
 # Golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+eval $(thefuck --alias)
