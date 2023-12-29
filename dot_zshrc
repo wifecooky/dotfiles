@@ -33,10 +33,6 @@ if builtin command -v bat > /dev/null; then
   alias cat="bat"
 fi
 
-if builtin command -v thefuck > /dev/null; then
-  alias fuck="thefuck"
-fi
-
 
 # pecoの活用1
 ## ctrl + r で過去に実行したコマンドを選択できるようにする。
@@ -85,6 +81,7 @@ alias gitco='git checkout $(git branch | sed -r "s/^[ \*]+//" | peco)'
 # -------------------------------------------------
 # Alias設定
 alias v='vim'
+alias fuck='thefuck'
 # -------------------------------------------------
 
 eval "$(starship init zsh)"
