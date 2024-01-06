@@ -4,12 +4,12 @@ $os\
 $username\
 $hostname\
 $kubernetes\
+${custom.git_username}\
 $git_branch\
 $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-${custom.git_username}\
 $golang\
 $line_break\
 $time\
@@ -51,10 +51,9 @@ tag_symbol = '🔖 '
 tag_disabled = false
 
 [custom.git_username]
-symbol = ''
 command = "git config user.name"
 when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
-format = ' @[$symbol($output)]($style) '
+format = ' [$symbol($output)@git]($style) '
 
 [golang]
 format = 'via [Go $version](bold cyan) '
