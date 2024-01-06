@@ -9,6 +9,7 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
+${custom.git_username}\
 $golang\
 $line_break\
 $time\
@@ -49,6 +50,11 @@ commit_hash_length = 4
 tag_symbol = '🔖 '
 tag_disabled = false
 
+[custom.git_username]
+symbol = ''
+command = "git config user.name"
+when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
+format = ' @[$symbol($output)]($style) '
 
 [golang]
 format = 'via [Go $version](bold cyan) '
